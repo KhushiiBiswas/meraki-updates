@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>{{ project.name | capfirst }}</title>
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+<main id="content" class="content">
+      <div class="pf-single-contents">
+      <div class="col-md-3">
+        <h2 class="bg-white font-size-30 mt-0 mb-15"><span class="text-center font-size-2x">{{ project.name }}</span></h2>
+      </div>
+        <section class="bg-white row pt-50 pb-50">
+            <div class="bg-white col-md-6 col-lg-6 col-sm-12">
+
+            	<div class="container">
+					<div class="row">
+						<div class="lqd-column col-md-6">
+
+							<div
+							class="ld-media-row d-flex"
+							data-liquid-masonry="true"
+							data-custom-animations="true"
+							data-ca-options='{"triggerHandler":"inview","animationTarget":".ld-media-item","duration":700,"delay":100,"easing":"easeOutQuint","initValues":{"scale":1},"animations":{"scale":1}}'>
+							{% for image in project.images %}
+								<div class="lqd-column col-md-6 col-sm-12 masonry-item">
+									<div class="ld-media-item">
+										<figure data-responsive-bg="true">
+											<img class="invisible" src="{{ image.image.url }}" alt="Media Gallery">
+										</figure>
+										<div class="ld-media-item-overlay d-flex flex-column align-items-center text-center justify-content-center">
+											<div class="ld-media-bg"></div>
+											<div class="ld-media-content">
+												<span class="ld-media-icon">
+													<span class="ld-media-icon-inner">
+														<i class="icon-ion-ios-add"></i>
+													</span>
+												</span>
+											</div><!-- /.ld-media-content -->
+										</div><!-- /.ld-media-item-overlay -->
+										<a href="./assets/demo/media-elements/md-10.jpg" class="liquid-overlay-link fresco" data-fresco-group="media-group-3"></a>
+									</div><!-- /.ld-media-item -->
+								</div><!-- /.col-md-4 -->
+                                {% endfor %}
+
+							</div><!-- /.ld-media-row -->
+
+						</div><!-- /.lqd-column col-md-12 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+            </div>
+
+            <div class="bg-white col-md-6 col-lg-6 col-sm-12">
+                <div
+								class="lqd-column col-xs-12 col-md-6 pr-md-7"
+								data-custom-animations="true"
+								data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 650, "delay": 70, "initValues": { "translateY": 100, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }'>
+
+								<h2 class="font-size-30 mt-0 mb-15"><span class="">Area: {{ project.buildup_area }}</span></h2>
+								<h3 class="mt-2 mb-40 font-size-30 lh-125 font-style-italic" >location: {{ project.location }}</h3>
+
+								<p>
+                                    {{ project.content }}
+                                </p>
+
+							</div><!-- /.lqd-column col-xs-12 col-md-6 -->
+            </div>
+        </section>
+      </div>
+</main>
+{% endblock %}

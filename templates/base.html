@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meraki & Co.</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#3ed2a7">
+
+    <style>
+        .txt{
+            color: black;
+        }
+		.text-brown{
+			color:#a3816a;
+		}
+    </style>
+
+{#	<link rel="shortcut icon" href="./favicon.png" />#}
+
+    {% block head %}
+
+    {% endblock %}
+
+    {% load static %}
+	<link rel="stylesheet" href="https://use.typekit.net/yza0jhh.css">
+	<link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff%7cLato&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'vendors/liquid-icon/liquid-icon.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/theme-vendors.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/theme.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/themes/restaurant.css' %}" />
+    <link rel="stylesheet" href="{% static 'font/flaticon.css' %}" />
+
+	<!-- Head Libs -->
+	<script async src="{% static 'vendors/modernizr.min.js' %}"></script>
+
+
+</head>
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="classic" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
+    {% load static %}
+	<div id="wrap">
+
+		<header class="main-header {% if request.path == '/' %}main-header-overlay {% endif %}">
+
+			<div class="mainbar-wrap">
+				<div class="megamenu-hover-bg"></div><!-- /.megamenu-hover-bg -->
+				<div class="container-fluid mainbar-container">
+					<div class="mainbar">
+						<div class="row mainbar-row align-items-lg-stretch px-5">
+
+{#                      ------------ nav 1  starts    #}
+							<div class="col">
+
+                                <div class="navbar-header">
+									<a class="navbar-brand text-left" href="{% url 'home' %}" rel="home">
+										<span class="navbar-brand-inner">
+											<img class="mobile-logo-default" src="{% static 'img/logo.png' %}" id="logo" alt="Meraki & Co. Logo">
+											<img class="logo-default" src="{% static 'img/logo.png' %}" id="logo" alt="Meraki & Co. Logo" style="max-height: 70px;">
+										</span>
+									</a>
+									<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+										<span class="sr-only">Toggle navigation</span>
+										<span class="bars">
+											<span class="bar"></span>
+											<span class="bar"></span>
+											<span class="bar"></span>
+										</span>
+									</button>
+								</div><!-- /.navbar-header -->
+
+                                <div class="col text-lg-right">
+								    <div class="collapse navbar-collapse text-lg-right" id="main-header-collapse">
+
+									<ul id="primary-nav" class="main-nav nav main-nav-hover-fade-inactive align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
+										<li>
+											<a href="{% url 'home' %}">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														Home
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="{% url 'projects' %}">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														Portfolio
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="{% url 'studio' %}">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														About us
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="{% url 'contact' %}">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														Find Us
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul><!-- /#primary-nav  -->
+
+								</div><!-- /#main-header-collapse -->
+                                </div>
+
+
+
+							</div><!-- /.col -->
+{#                      ------------ nav 1 ends  #}
+						</div><!-- /.mainbar-row -->
+					</div><!-- /.mainbar -->
+				</div><!-- /.mainbar-container -->
+			</div><!-- /.mainbar-wrap -->
+
+		</header><!-- /.main-header -->
+	    {% block body %}
+        {% endblock %}
+        <!-- {% if request.path != '/' %} -->
+            <footer class="main-footer bg-charade" data-sticky-footer="true">
+
+			<section class="bt-fade-white-015 pt-35 pb-35 mt-50">
+				<div class="container">
+					<div class="row">
+
+						<div class="lqd-column col-md-6">
+
+							<ul class="lqd-custom-menu reset-ul inline-nav">
+								<li><a href="#">Ave Guide</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Intergrations</a></li>
+								<li><a href="#">Community</a></li>
+							</ul>
+
+						</div><!-- /.col-md-6 -->
+
+						<div class="lqd-column col-md-6 text-md-right">
+							<p class="my-0"><span style="font-size: 15px;">© 2019 Ave theme. Made with love.</span></p>
+						</div><!-- /.col-md-6 text-md-right -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>
+
+		</footer><!-- /.main-footer -->
+        <!-- {% endif %} -->
+    </div><!-- /#wrap -->
+
+<script src="{% static 'vendors/jquery.min.js' %}"></script>
+<script src="{% static 'js/theme-vendors.js' %}"></script>
+<script src="{% static 'js/theme.min.js' %}"></script>
+</body>
+</html>

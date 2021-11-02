@@ -1,0 +1,217 @@
+{% comment %} 
+    
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Contact | Meraki & Co.</title>
+    <!-- CSS only -->
+{#<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">#}
+
+{% endblock %}
+
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+<body>
+    
+
+<!-- book section starts  -->
+
+<div class="image">
+            <img src="img/projects/project1.jpg" alt="">
+        </div>
+
+<section class="contact" id="contact">
+    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="C:/Users/khushi biswas/Desktop/Projects/meraki/media/project_images/project1_4IAuAft.jpg" alt="">
+        </div>
+
+        <form action="">
+            <div class="inputBox">
+                <h3>where to</h3>
+                <input type="text" placeholder="place name">
+            </div>
+            <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+<!-- ---------------CONTACT FORM--------------- -->
+							<div id="modal-1" class="lqd-modal lity-hide">
+								<div class="lqd-modal-inner">
+
+									<div class="lqd-modal-head"></div><!-- /.lqd-modal-head -->
+
+									<div class="lqd-modal-content">
+
+										<div class="row">
+
+											<div class="lqd-column col-md-12 px-4 pt-45 pb-30">
+
+												<div class="row d-flex flex-wrap align-items-center">
+
+													<div class="lqd-column col-md-6 col-md-offset-1">
+
+														<header class="fancy-title">
+															<h2>Drop us a line</h2>
+															<p>Just write to us and we will reach out to you.</p>
+														</header><!-- /.fancy-title -->
+
+													</div><!-- /.lqd-column col-md-6 col-md-offset-1 -->
+
+													<div class="lqd-column col-md-4 hidden-sm hidden-xs text-right">
+
+														<div class="iconbox text-right iconbox-xl" data-animate-icon="true" data-plugin-options='{"resetOnHover":true,"color":"rgb(216, 219, 226)","hoverColor":"rgb(0, 0, 0)"}'>
+															<div class="iconbox-icon-wrap">
+																<span class="iconbox-icon-container">
+																	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"> <polygon stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="1,30 63,1 23,41" /> <polygon stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="34,63 63,1 23,41" /> </svg>
+																</span>
+															</div><!-- /.iconbox-icon-wrap -->
+														</div><!-- /.iconbox -->
+													</div><!-- /.lqd-column col-md-4 hidden-sm hidden-xs -->
+
+												</div><!-- /.row -->
+
+												<div class="row">
+
+													<div class="lqd-column col-md-10 col-md-offset-1">
+
+														<div class="contact-form contact-form-inputs-underlined contact-form-button-circle">
+															<form name="enquiryForm" #enquiryForm action="" method="post" novalidate="novalidate">
+                                                                {% csrf_token %}
+																<div class="row d-flex flex-wrap">
+																	<div class="lqd-column col-md-6 mb-20">
+																		<input class="lh-25 mb-30" type="text" name="name" aria-required="true" aria-invalid="false" placeholder="Name" required>
+																		<input class="lh-25 mb-30" type="email" name="email" aria-required="true" aria-invalid="false" placeholder="Your email address" required>
+																		<input class="lh-25 mb-30" type="tel" name="mobile" aria-required="true" aria-invalid="false" placeholder="Mobile no" required>
+																	</div><!-- /.col-md-6 -->
+																	<div class="lqd-column col-md-6 mb-20">
+																		<textarea cols="10" rows="6" name="message" aria-required="true" aria-invalid="false" placeholder="Message" required></textarea>
+																	</div><!-- /.col-md-12 -->
+																	<div class="lqd-column col-md-6">
+																		<p class="font-size-16 opacity-07"><em>We all know how important your information is. They are always safe with us.</em></p>
+																	</div><!-- /.col-md-6 -->
+                                                                    <a onclick="validateForm()" style="float: end;" class="align-items-lg-end btn btn-solid lqd-column text-md-right btn-md circle btn-bordered border-thin font-size-14 font-weight-bold ltr-sp-025 lh-15 px-1" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+                                                                        <span>
+                                                                            <span class="btn-txt align-items-center text-center">Send</span>
+                                                                        </span>
+                                                                    </a>
+{#																	<div class="lqd-column btn col-md-6 text-md-right">#}
+{#																		<input type="button" onclick="validateForm()" value="Send message" class="font-size-13 ltr-sp-1 font-weight-bold">#}
+{#																	</div><!-- /.col-md-6 -->#}
+																</div><!-- /.row -->
+															</form>
+															<div class="contact-form-result hidden"></div><!-- /.contact-form-result -->
+														</div><!-- /.contact-form -->
+
+													</div><!-- /.col-md-10 col-md-offset-1 -->
+
+												</div><!-- /.row -->
+
+											</div><!-- /.lqd-column col-md-12 -->
+
+										</div><!-- /.row -->
+
+									</div><!-- /.lqd-modal-content -->
+
+									<div class="lqd-modal-foot"></div><!-- /.lqd-modal-foot -->
+
+								</div><!-- /.lqd-modal-inner -->
+							</div><!-- /.lqd-modal -->
+				</section>
+
+            <section class="vc_row bg-white pt-70 pb-50">
+				<div class="container">
+					<div class="row">
+
+						<div class="lqd-column col-md-12 px-4 pt-45 pb-30 bg-white box-shadow-1">
+
+							<div class="row d-flex flex-wrap align-items-center">
+
+								<div class="lqd-column col-md-6 col-md-offset-1">
+
+									<header class="fancy-title">
+										<h2>Drop us a line</h2>
+										<p>We are here to answer any question you may have</p>
+									</header><!-- /.fancy-title -->
+
+								</div><!-- /.lqd-column col-md-6 col-md-offset-1 -->
+
+								<div class="lqd-column col-md-4 hidden-sm hidden-xs text-right">
+
+									<div class="iconbox text-right iconbox-xl" data-animate-icon="true" data-plugin-options='{"resetOnHover":true,"color":"rgb(216, 219, 226)","hoverColor":"rgb(0, 0, 0)"}'>
+										<div class="iconbox-icon-wrap">
+											<span class="iconbox-icon-container">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"> <polygon stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="1,30 63,1 23,41" /> <polygon stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="34,63 63,1 23,41" /> </svg>
+											</span>
+										</div><!-- /.iconbox-icon-wrap -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.lqd-column col-md-4 hidden-sm hidden-xs -->
+
+							</div><!-- /.row -->
+
+							<div class="row">
+
+								<div class="lqd-column col-md-10 col-md-offset-1">
+
+									<div class="contact-form contact-form-inputs-underlined contact-form-button-circle">
+										<form name="enquiryForm" #enquiryForm action="" method="post" novalidate="novalidate">
+                                                                {% csrf_token %}
+																<div class="row d-flex flex-wrap">
+																	<div class="lqd-column col-md-6 mb-20">
+																		<input class="lh-25 mb-30" type="text" name="name" aria-required="true" aria-invalid="false" placeholder="Name" required>
+																		<input class="lh-25 mb-30" type="email" name="email" aria-required="true" aria-invalid="false" placeholder="Your email address" required>
+																		<input class="lh-25 mb-30" type="tel" name="mobile" aria-required="true" aria-invalid="false" placeholder="Mobile no" required>
+																	</div><!-- /.col-md-6 -->
+																	<div class="lqd-column col-md-6 mb-20">
+																		<textarea cols="10" rows="6" name="message" aria-required="true" aria-invalid="false" placeholder="Message" required></textarea>
+																	</div><!-- /.col-md-12 -->
+																	<div class="lqd-column col-md-6">
+																		<p class="font-size-16 opacity-07"><em>We all know how important your information is. They are always safe with us.</em></p>
+																	</div><!-- /.col-md-6 -->
+                                                                    <a onclick="validateForm()" style="float: end;" class="align-items-lg-end btn btn-solid lqd-column text-md-right btn-md circle btn-bordered border-thin font-size-14 font-weight-bold ltr-sp-025 lh-15 px-1" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+                                                                        <span>
+                                                                            <span class="btn-txt align-items-center text-center">Send</span>
+                                                                        </span>
+                                                                    </a>
+{#																	<div class="lqd-column btn col-md-6 text-md-right">#}
+{#																		<input type="button" onclick="validateForm()" value="Send message" class="font-size-13 ltr-sp-1 font-weight-bold">#}
+{#																	</div><!-- /.col-md-6 -->#}
+																</div><!-- /.row -->
+															</form>
+										<div class="contact-form-result hidden"></div><!-- /.contact-form-result -->
+									</div><!-- /.contact-form -->
+
+								
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html> {% endcomment %}

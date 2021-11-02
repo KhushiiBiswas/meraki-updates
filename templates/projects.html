@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block head %}
+        <title>Projects | Meraki & Co.</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+<main id="content" class="content">
+
+    <div class="pf-single-contents">
+			<section class="bg-white pt-80 pb-50">
+				<div class="container">
+					<div class="row">
+
+						<div
+								class="lqd-column col-xs-12 col-md-6 pr-md-7"
+								data-custom-animations="true"
+								data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 650, "delay": 70, "initValues": { "translateY": 100, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }'>
+
+								<h2 class="font-size-30 mt-0 mb-15"><span class="font-size-2x">Projects</span></h2>
+                            <hr>
+                            <br>
+
+
+{#								<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>#}
+
+							</div><!-- /.lqd-column col-xs-12 col-md-6 -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+
+				<div class="container-fluid">
+					<div class="row">
+
+						<div class="lqd-column col-md-12">
+
+							<div class="liquid-blog-posts">
+								<div class="liquid-blog-grid liquid-blog-grid liquid-blog-style-masonry row" data-liquid-masonry="true">
+
+                                    {% for project in projects %}
+									<div class="lqd-column col-lg-3 col-md-4 col-sm-6 col-xs-12 masonry-item">
+
+										<article onclick="fetchProject({{ project.id }})" class="liquid-lp liquid-blog-item liquid-blog-contents-inside liquid-blog-item-masonry liquid-blog-scheme-light liquid-blog-cloned-title h-600">
+
+											<figure class="liquid-lp-media" style="background-image: url({{ project.thumbnail.image.url }});">
+{#												<a >#}
+													<img src="./assets/demo/latest-posts/lp-14.jpg" alt="Latest Post">
+{#												</a>#}
+											</figure>
+
+											<div class="liquid-blog-item-inner">
+
+												<a href="#modal-1" data-lity="#modal-1" class="liquid-overlay-link">{{ project.name}}</a>
+
+												<header class="liquid-lp-header">
+													{% comment %} <div class="liquid-lp-details">
+														<ul class="liquid-lp-category liquid-lp-category-filled">
+															<li><a href="#">{{ project.id }}</a></li>
+														</ul>
+													</div><!-- /.liquid-lp-details --> {% endcomment %}
+													<h2 class="liquid-lp-title size-sm font-weight-bold h3 liquid-lp-title-clone" data-fittext="true" data-fittext-options='{ "maxFontSize": "currentFontSize" }'>
+														<a data-split-text="text" data-split-options='{ "type": "lines" }'>{{ project.name}}</a>
+													</h2>
+												</header>
+
+												<footer class="liquid-lp-footer">
+													<h2 class="liquid-lp-title size-sm font-weight-bold h3 liquid-lp-title-original" data-fittext="true" data-fittext-options='{ "maxFontSize": "currentFontSize" }'>
+														<a data-split-text="text" data-split-options='{ "type": "lines" }'>{{ project.name}}</a>
+													</h2>
+{#													<a onclick="fetchProject({{ project.id }})" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">#}
+														<span class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
+															<span class="btn-line btn-line-before"></span>
+															<span class="btn-txt">Explore</span>
+															<span class="btn-line btn-line-after"></span>
+														</span>
+{#													</a>#}
+												</footer>
+
+											</div><!-- /.liquid-blog-item-inner -->
+
+										</article>
+
+									</div><!-- /.lqd-column col-lg-3 col-md-4 col-sm-6 col-xs-12 masonry-item -->
+                                    {% endfor %}
+								</div><!-- /.liquid-blog-grid liquid-blog-grid liquid-blog-style-masonry -->
+							</div><!-- /.liquid-blog-posts -->
+
+						</div><!-- /.lqd-column col-md-12 -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container-fluid -->
+
+			</section>
+    </div>
+
+
+{# --------modal--------- #}
+	<div id="modal-1" class="lqd-modal lity-hide">
+		<div class="lqd-modal-inner">
+
+			<div class="lqd-modal-head"></div><!-- /.lqd-modal-head -->
+
+			<div class="lqd-modal-content">
+
+				<div class="row">
+					<div class="lqd-column col-md-12 px-4 pt-45 pb-30">
+						<div class="row d-flex flex-wrap">
+							<div class="container-fluid">
+								<div class="row">
+			
+									<div class="lqd-column col-md-12">
+										<div  class="carousel-container carousel-shadow-active carousel-nav-left carousel-nav-md carousel-dots-style1">
+											<div id="gallery" class="carousel-items row" data-lqd-flickity='{https://mdbootstrap.com/img/new/slides/042.jpg,"prevNextButtons":false,"pageDots":true,"groupCells":false,"wrapAround":true,"pauseAutoPlayOnHover":false}'>			
+											</div><!-- /.carousel-items -->
+										</div><!-- /.carousel-container -->
+									</div><!-- /.col-md-12 -->
+			
+								</div><!-- /.row -->
+							</div><!-- /.container-fluid -->
+			
+						</div><!-- /.row -->
+					</div><!-- /.lqd-column col-md-12 -->
+				</div><!-- /.row -->
+
+                <div class="row">
+
+						<div class="lqd-column col-md-12">
+
+							<div  class="carousel-container carousel-shadow-active carousel-nav-left carousel-nav-md carousel-dots-style1">
+								<div class="carousel-items row" data-lqd-flickity='{https://mdbootstrap.com/img/new/slides/042.jpg,"prevNextButtons":true,"pageDots":true,"groupCells":false,"wrapAround":true,"pauseAutoPlayOnHover":false}'>
+
+									<div class="carousel-item col-md-6">
+										<figure>
+											<img src="{% static 'demo/misc/carousel-item-8.jpg' %}" alt="Carousel Item">
+										</figure>
+									</div><!-- /.carousel-item -->
+
+									<div class="carousel-item col-md-6">
+										<figure>
+											<img src="{% static 'demo/misc/carousel-item-9.jpg' %}" alt="Carousel Item">
+										</figure>
+									</div><!-- /.carousel-item -->
+
+									<div class="carousel-item col-md-6">
+										<figure>
+											<img src=" {% static 'demo/misc/carousel-item-10.jpg' %}" alt="Carousel Item">
+										</figure>
+									</div><!-- /.carousel-item -->
+
+								</div><!-- /.carousel-items -->
+							</div><!-- /.carousel-container -->
+
+						</div><!-- /.col-md-12 -->
+
+					</div><!-- /.row -->
+			</div><!-- /.lqd-modal-content -->
+
+			<div class="lqd-modal-foot"></div><!-- /.lqd-modal-foot -->
+
+		</div><!-- /.lqd-modal-inner -->
+	</div><!-- /.lqd-modal -->
+
+</main>
+{#  --------- Scripts--------  #}
+<script>
+
+	function drawGallery(x){
+		console.log('reached drawgallery.');
+		div = document.getElementById('gallery');
+		console.log(x.images.length);
+		for (i = 0; i < x.images.length; i++){
+		
+			new_image = document.createElement('div');
+			new_image.classList.add("carousel-item","col-md-6");
+			fig = document.createElement('figure');
+
+			img = document.createElement('img');
+			img.setAttribute('src',x.images[i]);
+
+			fig.appendChild(img);
+			new_image.appendChild(fig);
+			div.appendChild(new_image);
+			console.log('added.');
+		}
+
+	}
+
+
+	// catch the form's submit event
+	function fetchProject(id){
+		var project_id = id;
+		$.ajax({
+			data: {'id':id}, // get the form data
+			method: "GET",
+			url: "{% url 'fetchproject' %}",
+			// on success
+			success: function (response) {
+				console.log('fetching complete');
+				console.log(response);
+				{#drawGallery(response);#}
+
+			},
+			// on error
+			error: function (response) {
+				// alert the error if any error occured
+				console.log(response.responseJSON.errors)
+			}
+		});
+
+		return false;
+	};
+</script>
+
+{% endblock %}

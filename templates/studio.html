@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Studio | Meraki & Co.</title>
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+    <main id="content" class="content">
+        <div class="pf-single-contents">
+            <section id="features" class="vc_row pt-20 pb-10">
+
+				<div class="lqd-custom-menu lqd-sticky-menu on-top"
+					data-pin="true"
+					data-pin-options='{ "offset": "[data-sticky-header] .mainbar-wrap.is-stuck", "duration": "last-link", "pushFollowers": false }'
+				>
+					<ul class="reset-ul inline-nav text-center">
+						<li class="px-2"><a href="#about" data-localscroll="true" data-localscroll-options='{ "offsetElements": "[data-sticky-header] .mainbar-wrap, parent" }'>About</a></li>
+						<li class="px-2"><a href="#studio" data-localscroll="true" data-localscroll-options='{ "offsetElements": "[data-sticky-header] .mainbar-wrap, parent" }'>Studio</a></li>
+{#                        <li class="px-2"><a href="#studio" data-localscroll="true" data-localscroll-options='{ "offsetElements": "[data-sticky-header] .mainbar-wrap, parent" }'>Studio</a></li>#}
+						<li class="px-2"><a href="#team" data-localscroll="true" data-localscroll-options='{ "offsetElements": "[data-sticky-header] .mainbar-wrap, parent" }'>Team</a></li>
+{#						<li class="px-2"><a href="#contact" data-localscroll="true" data-localscroll-options='{ "offsetElements": "[data-sticky-header] .mainbar-wrap, parent" }'>Contact</a></li>#}
+					</ul>
+				</div><!-- /.lqd-custom-menu -->
+
+			</section>
+
+            <section id="about" class="bg-white pt-85 pb-55">
+                <h3 style="padding-left: 10%;"> "About" section here</h3>
+            </section>
+
+
+            <section id="studio" class="bg-white pt-85 pb-55">
+					<div class="container">
+						<div class="row d-flex flex-wrap align-items-center">
+
+							<div
+								class="lqd-column col-xs-12 col-md-6 pr-md-7"
+								data-custom-animations="true"
+								data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 650, "delay": 70, "initValues": { "translateY": 100, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }'>
+
+								<h2 class="font-size-30 mt-0 mb-15"><span class="font-size-2x">Studio</span></h2>
+								<h3 class="mt-2 mb-40 font-size-30 lh-125 font-style-italic" >As far as designs are concerned, we at <b>Meraki & Co.</b> think it is always best to be as minimalist as possible.</h3>
+
+								<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+
+							</div><!-- /.lqd-column col-xs-12 col-md-6 -->
+
+							<div class="lqd-column col-xs-12 col-md-6">
+
+								<div class="liquid-img-group-container">
+									<div class="liquid-img-group-inner">
+										<div class="liquid-img-group-single" data-reveal="true" data-reveal-options='{"direction":"lr"}'>
+											<div class="liquid-img-group-img-container">
+												<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"scaleX":1.25,"scaleY":1.25}' data-parallax-to='{"scaleX":1,"scaleY":1}' data-parallax-options='{"overflowHidden":true,"easing":"linear"}'>
+													<figure>
+														<img src="{% static 'demo/portfolio/pf-single-2.jpg' %}" alt="Minimalism">
+													</figure>
+												</div><!-- /.liquid-img-container-inner -->
+											</div><!-- /.liquid-img-group-img-container -->
+										</div><!-- /.liquid-img-group-single -->
+									</div><!-- /.liquid-img-group-inner -->
+								</div><!-- /.liquid-img-group-container -->
+
+							</div><!-- /.lqd-column col-xs-12 col-md-6 -->
+
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</section>
+
+            <section id="team" class="bg-white">
+				<div class="container">
+					<div class="row">
+
+                        <div class="row d-flex flex-wrap align-items-center" style="padding-top: 8%;">
+
+							<div
+								class="lqd-column col-xs-12 col-md-6 pr-md-7"
+								data-custom-animations="true"
+								data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 650, "delay": 70, "initValues": { "translateY": 100, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }'>
+
+								<h2 class="font-size-30 mt-0 mb-15"><span class="font-size-2x">Team at Meraki & Co.</span></h2>
+
+							</div><!-- /.lqd-column col-xs-12 col-md-6 -->
+                        </div>
+
+                    <hr>
+                        <div style="margin-top: 18%;">
+                            {% for member in team %}
+						    <div class="lqd-column col-md-3">
+
+							<div class="ld-tm pos-rel text-light">
+								<div class="ld-tm-img">
+									<figure>
+										<img src="{{ member.photo.url }}" alt="name: {{ member.name }}, designation: {{ member.designation }}">
+									</figure>
+								</div><!-- /.ld-tm-img -->
+								<div class="ld-tm-info ld-overlay d-flex flex-column align-items-center justify-content-center">
+									<h3 class="ld-tm-name">{{ member.name}}</h3>
+									<h6 class="ld-tm-pos text-uppercase">{{ member.designation }}</h6>
+{#									<ul class="ld-tm-social social-icon mt-5">#}
+{#										<li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-behance"></i></a></li>#}
+{#										<li><a href="#"><i class="fa fa-dribbble"></i></a></li>#}
+{#									</ul>#}
+								</div><!-- /.ld-tm-info -->
+							</div><!-- /.ld-team-member -->
+
+						</div><!-- /.col-md-4 -->
+                            {% endfor %}
+                        </div>
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>
+        </div>
+    </main>
+{% endblock %}

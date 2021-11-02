@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meraki & Co.</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#3ed2a7">
+
+    <style>
+        .txt{
+            color: black;
+        }
+		.text-brown{
+			color:#a3816a;
+		}
+    </style>
+
+{#	<link rel="shortcut icon" href="./favicon.png" />#}
+
+    {% load static %}
+	<link rel="stylesheet" href="https://use.typekit.net/yza0jhh.css">
+	<link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff%7cLato&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'vendors/liquid-icon/liquid-icon.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/theme-vendors.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/theme.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/themes/restaurant.css' %}" />
+    <link rel="stylesheet" href="{% static 'font/flaticon.css' %}" />
+
+	<!-- Head Libs -->
+	<script async src="{% static 'vendors/modernizr.min.js' %}"></script>
+
+
+</head>
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="classic" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
+{% load static %}
+	<div id="wrap">
+{{ request.url }}
+
+    {# ---- sample nav #}
+		<header class="main-header nav-dark">
+
+			<div class="mainbar-wrap px-4">
+
+				<span class="megamenu-hover-bg"></span>
+
+				<div class="container-fluid mainbar-container">
+
+					<div class="mainbar">
+
+						<div class="row mainbar-row">
+
+							<div class="col-auto">
+
+								<div class="navbar-header">
+									<a class="navbar-brand" href="{% url 'home' %}" rel="home">
+										<span class="navbar-brand-inner">
+											<img class="logo-dark" src="{% static 'img/logo.png' %}" alt="Ave HTML Template"  >
+											<img class="logo-sticky" src="{% static 'img/logo.png' %}" alt="Ave HTML Template"  >
+											<img class="mobile-logo-default" src="{% static 'img/logo.png' %}" alt="Ave HTML Template">
+											<img class="logo-default" src="{% static 'img/logo.png' %}" alt="Ave HTML Template" >
+										</span>
+									</a>
+									<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+										<span class="sr-only">Toggle navigation</span>
+										<span class="bars">
+											<span class="bar"></span>
+											<span class="bar"></span>
+											<span class="bar"></span>
+										</span>
+									</button>
+								</div><!-- /.navbar-header -->
+
+							</div><!-- /.col-auto -->
+
+							<div class="col text-lg-right">
+
+								<div class="collapse navbar-collapse navbar-visible-ontoggle justify-content-end" id="main-header-collapse" aria-expanded="false" role="tablist">
+
+									<ul class="main-nav main-nav-hover-underline-1 nav align-items-lg-stretch justify-content-lg-end">
+										<li>
+											<a href="index.html">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														Home
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li class="menu-item-has-children megamenu megamenu-fullwidth">
+											<a href="#">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														About us
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+                                        </li>
+                                        										<li class="menu-item-has-children megamenu megamenu-fullwidth">
+											<a href="#">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+                                                        Find us
+														<span class="submenu-expander">
+															<i class="fa fa-angle-down"></i>
+														</span>
+													</span>
+												</span>
+											</a>
+                                        </li>
+									</ul>
+
+								</div><!-- /.navbar-collapse -->
+
+								<div class="header-module">
+
+									<button class="nav-trigger main-nav-trigger main-nav-trigger style-1 collapsed" role="button" type="button" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" aria-controls="main-header-collapse">
+										<span class="bars">
+											<span class="bar"></span>
+											<span class="bar"></span>
+											<span class="bar"></span>
+										</span>
+									</button>
+
+								</div><!-- /.header-module -->
+
+							</div><!-- /.col -->
+
+						</div><!-- /.row mainbar-row -->
+
+					</div><!-- /.mainbar -->
+
+				</div><!-- /.container -->
+
+			</div><!-- /.mainbar-wrap -->
+		</header>
+{# --------------------------------------------- #}
+
+
+    <div id="modal-2" class="lqd-modal lity-hide">
+								<div class="lqd-modal-inner">
+
+									<div class="lqd-modal-head"></div><!-- /.lqd-modal-head -->
+
+									<div class="lqd-modal-content">
+
+										<div class="row">
+											<div class="col-md-12 text-center">
+
+												<figure class="mb-3">
+													<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3697.5046154794863!2d82.14337371548365!3d22.068537685444447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280bb13bea43e3%3A0xe37063ae83d54e69!2sMeraki%20%26%20Co.!5e0!3m2!1sen!2sin!4v1611509604287!5m2!1sen!2sin" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+												</figure>
+
+												<div class="row">
+													<div class="lqd-column col-md-8 col-md-offset-2">
+														<p>D-32, near Shriram towers, Vypar Vihar, Bilaspur, Chhattisgarh 495004</p>
+													</div><!-- /.col-md-8 col-md-offset-2 -->
+												</div><!-- /.row -->
+
+											</div><!-- /.col-md-12 -->
+										</div><!-- /.row -->
+
+									</div><!-- /.lqd-modal-content -->
+
+									<div class="lqd-modal-foot"></div><!-- /.lqd-modal-foot -->
+
+								</div><!-- /.lqd-modal-inner -->
+							</div><!-- /.lqd-modal -->
+
+{#		<footer class="main-footer pt-80 pb-80" data-sticky-footer="true">#}
+{##}
+{#			<section class="vc_row mb-50">#}
+{##}
+{#				<div class="container">#}
+{#					<div class="row d-flex flex-wrap align-items-center">#}
+{##}
+{#						<div class="lqd-column col-md-6 col-xs-12">#}
+{#							<div class="fancy-title mb-30">#}
+{#								<img class="mb-3" src="{% static 'img/misc/wave.svg' %}" alt="Wave shape">#}
+{#								<h2 class="text-white my-0">Subscribe to the events</h2>#}
+{#							</div>#}
+{#						</div><!-- /.lqd-column col-md-6 col-xs-12 -->#}
+{##}
+{#						<div class="lqd-column col-md-6 col-xs-12">#}
+{##}
+{#							<div class="ld-sf ld-sf--input-underlined ld-sf--button-solid ld-sf--size-lg ld-sf--sharp ld-sf--border-thin ld-sf--button-show ld-sf--button-inside button-shrinked">#}
+{#								<form id="ld_subscribe_form" class="ld_sf_form" action="https://liquid-themes.us20.list-manage.com/subscribe/post?u=7f582d555cef808a99ea001a7&amp;id=58ab120d89" name="mc-embedded-subscribe-form" method="post">#}
+{#									<p class="ld_sf_paragraph pr-2">#}
+{#										<input type="email" class="ld_sf_text" id="mce-EMAIL" name="EMAIL" placeholder="Enter your email address" value="">#}
+{#									</p>#}
+{#									<button type="submit" class="ld_sf_submit">#}
+{#										<span class="submit-text">Subscribe</span>#}
+{#										<span class="ld-sf-spinner">#}
+{#											<span>Sending </span>#}
+{#										</span>#}
+{#									</button>#}
+{#								</form>#}
+{#								<div class="ld_sf_response"></div>#}
+{#							</div><!-- /.ld-sf -->#}
+{##}
+{#						</div><!-- /.lqd-column col-md-6 col-xs-12 -->#}
+{##}
+{#						<div class="lqd-column col-md-12">#}
+{#							<hr>#}
+{#						</div><!-- /.lqd-column col-md-12 -->#}
+{##}
+{#					</div><!-- /.row -->#}
+{#				</div><!-- /.container -->#}
+{##}
+{#			</section>#}
+{##}
+{#			<section class="vc_row">#}
+{##}
+{#				<div class="container">#}
+{#					<div class="row d-flex flex-wrap">#}
+{##}
+{#						<div class="lqd-column col-md-3 col-xs-12 mb-30">#}
+{##}
+{#							<figure>#}
+{#								<img width="210" height="208" src="{% static 'img/logo/restaurant-dark@2x.png' %}" alt="Ave Logo">#}
+{#							</figure>#}
+{##}
+{#						</div><!-- /.lqd-column col-md-3 -->#}
+{##}
+{#						<div class="lqd-column col-md-3 col-sm-6 col-xs-12 mb-30">#}
+{##}
+{#							<h3 class="widget_title">Contact us</h3>#}
+{##}
+{#							<p class="font-size-16 lh-175">#}
+{#								reserve.table.com <br>#}
+{#								<br>#}
+{#								290 Maryam Springs 260, <br>#}
+{#								Courbevoie, Paris, France <br>#}
+{#								+47 213 5941 295 <br>#}
+{#							</p>#}
+{##}
+{##}
+{#						</div><!-- /.lqd-column col-md-3 -->#}
+{##}
+{#						<div class="lqd-column col-md-3 col-sm-6 col-xs-12 mb-30">#}
+{##}
+{#							<h3 class="widget_title">About us</h3>#}
+{##}
+{#							<ul class="lqd-custom-menu reset-ul font-size-16 lh-175">#}
+{#								<li><a href="#">Reserve a Table</a></li>#}
+{#								<li><a href="#">Our Chefs</a></li>#}
+{#								<li><a href="#">Contact Us</a></li>#}
+{#								<li><a href="#">About Restaurant</a></li>#}
+{#								<li><a href="#">TripAdvisor List</a></li>#}
+{#							</ul>#}
+{##}
+{#						</div><!-- /.lqd-column col-md-3 -->#}
+{##}
+{#						<div class="lqd-column col-md-3 col-xs-12 mb-30">#}
+{##}
+{#							<h3 class="widget_title">Keep in touch</h3>#}
+{##}
+{#							<ul class="social-icon circle social-icon-md">#}
+{#								<li><a href="#" target="_blank"><i class="fa fa-flickr"></i></a></li>#}
+{#								<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>#}
+{#								<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>#}
+{#							</ul>#}
+{##}
+{#						</div><!-- /.lqd-column col-md-3 -->#}
+{##}
+{#					</div><!-- /.row -->#}
+{#				</div><!-- /.container -->#}
+{##}
+{#			</section>#}
+{##}
+{#		</footer><!-- /.main-footer -->#}
+    </div><!-- /#wrap -->
+<script src="{% static 'vendors/jquery.min.js' %}"></script>
+<script src="{% static 'js/theme-vendors.js' %}"></script>
+<script src="{% static 'js/theme.min.js' %}"></script>
+</body>
+</html>

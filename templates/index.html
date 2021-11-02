@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<main id="content" class="content">
+            {% load static %}
+
+    <!-- <section></section> -->
+
+	<section
+            id="slideshow"
+			class=" lqd-css-sticky bg-cover bg-center fullheight d-flex align-items-center py-5"
+			data-row-bg="true"
+			data-animate-onscroll="true"
+			data-animate-from='{"opacity":1}'
+			data-animate-to='{"opacity":0.6}'
+			data-slideshow-bg="true"
+            data-slideshow-options='{"effect":"scale","imageArray":["/static/img/cover.jpg","/static/img/cover.jpg"]}'
+			>
+
+				<span class="row-bg-loader"></span>
+
+				<div class="liquid-row-overlay bg-white opacity-03"></div>
+
+				<div class="container">
+					<div class="row">
+
+						<div class="lqd-space" style="height: 250px;"></div>
+
+						<div
+						class="slideshow lqd-column col-md-10 col-md-offset-1 text-center px-lg-7"
+						data-custom-animations="true"
+						data-ca-options='{"triggerHandler":"inview", "animationTarget":"all-childs", "duration":1600, "delay":250, "easing":"easeOutQuint", "direction":"forward", "initValues":{"opacity":0, "translateY":100}, "animations":{"opacity":1, "translateY":0}}'
+						data-parallax="true"
+						data-parallax-from='{"translateY":1}'
+						data-parallax-to='{"translateY":-220}'
+						data-parallax-options='{"easing":"linear","reverse":true,"triggerHook":"onEnter", "overflowHidden": false}'>
+
+							<!-- <h3 class="font-size-12 text-white ltr-sp-015 mt-0 mb-2"><em>Since 1911</em></h3> -->
+							<!-- <h2
+							class="mt-0 mb-5 text-white lh-115"
+							data-fittext="true"
+							data-fittext-options='{"compressor":0.75,"maxFontSize":"64","minFontSize":"48"}'
+							data-split-text="true"
+							data-split-options='{"type":"lines"}'>
+							We serve tasty food and drinks for beautiful people.</h2>
+							<a
+							href="#"
+							class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2"
+							data-localscroll="true"
+							data-localscroll-options='{"scrollBelowSection":true}'>
+								<span>
+									<span class="btn-txt">RESERVE A TABLE</span>
+								</span>
+							</a> -->
+
+{#							<div class="lqd-space arual-font " style="height: 120px;"></div>#}
+
+							<p
+							class="text-uppercase text-black font-size-16 ltr-sp-3"
+							data-split-text="true"
+							data-split-options='{"type":"lines"}'>
+                                <img src="{% static 'img/projects/sketch3.png' %}" style="max-height:45vh;">
+                            We do justice to your dreams.  <br>
+<!--							<a class="text-white" href="#">find us at Google Maps</a>-->
+							</p>
+
+						</div><!-- /.lqd-column col-md-10 col-md-offset-1 -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+
+    </section>
+    
+    <section class="vc_row pt-70 pb-5" style="background-color: #f7f8fb;">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="lqd-column col-md-8 col-md-offset-2">
+
+                    <header class="fancy-title text-center mb-70">
+<!--                        <p class="arual-font">hello bc</p>-->
+                        <h3 class="text-primary font-size-14 ltr-sp-015 mt-0 mb-2"><em>Project glimpses</em></h3>
+                        <h3 class="arual-font text-black mt-0 mb-2">Experience the Luxury at Meraki & Co.</h3>
+                        <img src="{% static 'img/misc/wave.svg' %} " alt="Wave shape">
+                    </header>
+
+                </div><!-- /.lqd-column col-md-8 col-md-offset-2 -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <section
+                class="vc_row py-5 fullheight d-flex flex-wrap align-items-center mb-5 bg-cover"
+				data-parallax="true"
+				data-parallax-options='{"parallaxBG":true}'
+				data-slideshow-bg="true"
+				data-slideshow-options='{"effect": "slide", "delay":2500,"imageArray":["{% static 'img/projects/project1.jpg' %}","{% static 'img/projects/project1.jpg' %}", "{% static 'img/projects/project3.jpg' %}", "{% static 'img/projects/project4.jpg' %}"]}'>
+				<div class="container">
+					<div class="row">
+
+						<div class="lqd-column col-md-10 col-md-offset-1 text-center">
+
+							<div class="ld-fancy-heading">
+								<h1
+									class="text-white"
+									data-fittext="true"
+									data-fittext-options='{"compressor":0.8, "maxFontSize": 90, "minFontSize": 50}'
+									data-split-text="true"
+									data-custom-animations="true"
+									data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","delay":"35","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":20,"rotateZ":9,"opacity":0},"animations":{"translateY":0,"rotateZ":0,"opacity":1}}'
+									data-split-options='{"type":"chars, words"}'
+									data-text-rotator="true">
+										<span class="ld-fh-txt">
+											Experience
+											<span class="txt-rotate-keywords">
+
+												<span class="keyword active">Meraki</span>
+												<span class="keyword">Elegance</span>
+												<span class="keyword">Minimalism</span>
+												<span class="keyword">Luxury</span>
+											</span><!-- /.txt-rotate-keywords -->
+										</span>
+								</h1>
+							</div><!-- /.ld-fancy-heading -->
+
+							<a href="#" class="btn text-uppercase btn-lg btn-bordered border-thin text-uppercase font-size-13 font-weight-bold ltr-sp-2 btn-white" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+								<span>
+									<span class="btn-txt">Explore Projects</span>
+								</span>
+							</a>
+
+						</div><!-- /.lqd-column col-md-8 col-md-offset-2 -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+		</section>
+    </section>
+
+</main><!-- /#content.content -->
+
+{% endblock %}

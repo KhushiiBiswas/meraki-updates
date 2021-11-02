@@ -1,0 +1,10 @@
+@import 'theme';
+
+@font-face {
+  font-family: arual;
+  src: url(/static/scss/Arual.ttf);
+}
+
+.arual-font{
+  font-family: arual !important;
+}
